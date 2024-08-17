@@ -1,0 +1,15 @@
+<div class="h-16 w-full flex justify-between items-center bg-indigo-500 px-8 text-gray-100 fixed top-0"> 
+  <%= link_to "Home", "/" %>
+  <% if current_user %>
+    <%= link_to "New Email", new_email_path, class: "hidden md:flex justify-center text-center bg-indigo-900 text-indigo-50 px-2 py-3 rounded-lg ml-auto w-40", 
+        data: { turbo_frame: "new_email" } %>
+    <div data-controller="dropdown" data-action="click@window->dropdown#closeUnlessDropdown" class="relative ml-4">
+      <span data-action="click->dropdown#toggle" class="flex"> <%= current_user.username %><span class="hidden md:flex">@futuremail.com </span> </span>
+      <div data-dropdown-target="menu" class="hidden h-56 w-40 md:w-56 absolute top-8 bg-white rounded-lg p-2 z-[999]">
+        <%= link_to "New Email", new_email_path, class: "flex md:hidden justify-center text-center bg-indigo-900 text-indigo-50 p-2 rounded-lg", 
+          data: { turbo_frame: "new_email", action: "dropdown#close" } %>
+        <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "text-gray-900" %>
+      </div>
+    </div>
+  <% end %>
+</div>

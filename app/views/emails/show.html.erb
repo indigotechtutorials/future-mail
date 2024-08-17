@@ -1,0 +1,11 @@
+<%= turbo_frame_tag :emails do %>
+  <%= link_to "Back to emails", "/", class: "text-white text-xl" %>
+  <div class="flex flex-col items-center text-gray-900 bg-white rounded-lg py-8 px-4 mt-4">
+    <h1 class="text-5xl"> <%= @email.subject %> </h1>
+    <p class="text-xl"> <%= @email.to_address %> </p>
+    <p> <%= time_ago_in_words(@email.created_at) %> ago </p>
+    <div class="mt-2 text-lg"> 
+      <%= @email.body %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to_address: MyString
+  subject: MyString
+  user: one
+
+two:
+  to_address: MyString
+  subject: MyString
+  user: two

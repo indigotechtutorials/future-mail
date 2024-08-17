@@ -1,0 +1,14 @@
+<%= link_to email do %>
+  <div class="h-18 flex flex-col bg-white hover:bg-gray-200 p-2"> 
+    <div class="flex justify-between w-full">
+      <span class="text-xl font-semibold"> <%= email.subject %> </span>
+      <div> 
+        Sending To <span> <%= email.to_address %></span>
+      </div>
+    </div>
+    <div class="flex justify-between w-full">
+      <span class="text-lg"> <%= email.body.body.to_plain_text.first(50) %>... </span>
+      <div> <%= email.created_at.strftime("%I:%M%P, %B %d, %Y") %> </div>
+    </div>
+  </div>
+<% end %>

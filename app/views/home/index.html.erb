@@ -1,0 +1,10 @@
+<div class="w-full min-h-screen flex flex-col items-center justify-center pb-20">
+  <div class="bg-gray-500/50 rounded-lg p-8 z-10 backdrop-blur">
+    <h1 class="font-bold text-7xl text-indigo-100">Future Mail</h1>
+    <p class="text-lg text-indigo-100">The best emailing service built with Ruby on Rails</p>
+    <div class="max-w-lg w-full flex justify-center mx-auto mt-8 gap-4"> 
+      <%= link_to "Sign in", new_user_session_path, class: "bg-teal-300 text-lg font-semibold text-teal-700 px-2 py-4 text-center rounded-lg w-56" %>
+      <%= link_to "Create Account", new_user_registration_path, class: "text-lg font-semibold text-teal-100 px-2 py-4 text-center border-b-4 border-teal-500" %>
+    </div>
+  </div>
+</div>
