@@ -80,5 +80,5 @@ test:
 production:
   <<: *default
   database: gmail_rails_production
-  username: gmail_rails
-  password: <%= ENV["GMAIL_RAILS_DATABASE_PASSWORD"] %>
+  # username: gmail_rails
+  # password: <%= ENV["GMAIL_RAILS_DATABASE_PASSWORD"] %>
